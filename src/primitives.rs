@@ -192,13 +192,17 @@ pub struct TransactionDetails {
     pub confirmations: u32,
     pub from: String,
     pub from_address: String,
+    pub from_type: u8,
     pub to: String,
     pub to_address: String,
+    pub to_type: u8,
     pub value: u64,
     pub fee: u64,
     pub data: Option<String>,
     pub proof: Option<String>,
     pub flags: u8,
+    pub validity_start_height: u32,
+    pub network_id: u8,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
